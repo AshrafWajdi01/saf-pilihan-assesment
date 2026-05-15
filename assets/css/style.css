@@ -1,0 +1,429 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    background-image: url("../img/shek.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.header h1 span {
+    color: #0d6efd;
+}
+
+.header p {
+    color: #444;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.header small {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+}
+
+/* ===== WINDOW ===== */
+.xp-window {
+    width: 950px;
+    background: #ece9d8;
+    border: 2px solid #0a246a;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.6);
+}
+
+/* ===== TITLE BAR ===== */
+.xp-titlebar {
+    background: linear-gradient(to bottom, #1e66ff, #0a4bd8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.xp-controls span {
+    width: 20px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+    background: #d6d6d6;
+    color: black;
+    border: 1px solid #808080;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.xp-controls .close {
+    background: #cc3333;
+    color: white;
+}
+
+/* ===== TABS ===== */
+.xp-tabs {
+    display: flex;
+    background: #d4d0c8;
+    border-bottom: 2px solid #808080;
+}
+
+.tab {
+    padding: 6px 14px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-right: 1px solid #808080;
+    font-size: 13px;
+}
+
+.tab:hover { background: #f1f1f1; }
+
+.tab.active {
+    background: #ece9d8;
+    border-bottom: 2px solid #ece9d8;
+    margin-bottom: -2px;
+}
+
+/* ===== CONTENT ===== */
+.xp-content {
+    padding: 20px 24px;
+}
+
+/* ===== XP FORM LAYOUT ===== */
+.xp-form-table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.xp-form-table td {
+    vertical-align: middle;
+}
+
+.xp-form-table td:first-child {
+    padding-right: 10px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.xp-form-table td:last-child {
+    width: 300px;
+}
+
+/* ===== INPUTS ===== */
+.xp-input {
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #404040 #d4d0c8 #d4d0c8 #404040;
+    background: white;
+    padding: 3px 5px;
+    font-family: Tahoma;
+    font-size: 13px;
+    outline: none;
+}
+
+.xp-input:focus {
+    border-color: #1e66ff;
+}
+
+/* ===== BUTTONS ===== */
+.xp-btn {
+    padding: 4px 16px;
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px outset #d4d0c8;
+    min-width: 80px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+
+    /* add smooth feel */
+    transition: all 0.08s ease-in-out;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+}
+
+.xp-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.15);
+    filter: brightness(1.05);
+}
+
+.xp-btn:active {
+    border-style: inset;
+    transform: translateY(2px);
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.xp-btn-blue {
+    background: linear-gradient(to bottom, #5aa7ff, #1e66ff);
+    color: white;
+    border-color: #0a4bd8;
+}
+
+.xp-btn-green {
+    background: linear-gradient(to bottom, #6fe36f, #2dbb2d);
+    color: white;
+    border-color: #1a8c1a;
+}
+
+.xp-btn-warn {
+    background: linear-gradient(to bottom, #ffd36a, #ffb300);
+    color: #333;
+    border-color: #a66b00;
+}
+
+.xp-btn-red {
+    background: linear-gradient(to bottom, #ff6b6b, #d90000);
+    color: white;
+    border-color: #8b0000;
+}
+
+.xp-btn-row {
+    display: flex;
+    gap: 6px;
+}
+
+/* ===== TABLE ===== */
+.xp-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    
+    /* Sunken inset look — classic XP listview */
+    border: 2px solid #808080;
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-right-color: #dfdfdf;
+    border-bottom-color: #dfdfdf;
+    
+    font-size: 13px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.xp-table thead tr {
+    background: #d4d0c8;  /* XP grey, NOT modern blue */
+}
+
+.xp-table th {
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    color: black;
+
+    /* Column header separator */
+    border-right: 1px solid #808080;
+    border-bottom: 2px solid #808080;
+    
+    /* Raised button-like header */
+    background: linear-gradient(to bottom, #e8e4d8, #ccc9bc);
+}
+
+.xp-table th:last-child {
+    border-right: none;
+}
+
+.xp-table td {
+    padding: 3px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #f0f0f0;
+    color: black;
+}
+
+.xp-table td:last-child {
+    border-right: none;
+}
+
+/* NO zebra striping — XP listview is plain white rows */
+.xp-table tbody tr:nth-child(even) {
+    background: white;
+}
+
+/* XP highlight: solid blue selection color */
+.xp-table tbody tr:hover {
+    background: #0a246a;
+    color: white;
+}
+
+.xp-table tbody tr:hover td {
+    color: white;
+}
+
+/* ===== XP TASKBAR ===== */
+.xp-taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 38px;
+    background: linear-gradient(to bottom, #245edc 0%, #1941a5 4%, #1c3fa0 6%, #2b62d9 10%, #2660d8 50%, #1d4db8 95%, #1a3d9e 100%);
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    border-top: 1px solid #5a8ae0;
+    box-shadow: 0 -1px 0 #0a246a;
+}
+
+/* START BUTTON */
+.xp-start {
+    height: 100%;
+    padding: 0 14px 0 8px;
+    background: linear-gradient(to bottom, #5cb85c 0%, #3c9a3c 50%, #2d8a2d 51%, #4caa4c 100%);
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #1a5c1a;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: white;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 2px 0 4px rgba(0,0,0,0.3);
+    user-select: none;
+}
+
+/* Windows logo made from 4 colored squares */
+.xp-logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    width: 22px;
+    height: 22px;
+    transform: skewX(-5deg);
+}
+
+.xp-logo span {
+    border-radius: 1px;
+    min-width: 0;
+    min-height: 0;
+}
+
+.xp-logo .r { background: #ff4444; }
+.xp-logo .g { background: #44cc44; }
+.xp-logo .b { background: #4488ff; }
+.xp-logo .y { background: #ffcc00; }
+
+.xp-start:hover {
+    filter: brightness(1.1);
+}
+
+/* TASKBAR MIDDLE — open windows */
+.xp-taskbar-items {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 6px;
+    height: 100%;
+}
+
+.xp-taskbar-btn {
+    height: 26px;
+    min-width: 140px;
+    max-width: 280px;
+    padding: 0 8px;
+    background: linear-gradient(to bottom, #1a4db8, #2060d0);
+    border: 1px solid #0a2d80;
+    border-top-color: #5a80d0;
+    color: white;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.xp-taskbar-btn.active {
+    background: linear-gradient(to bottom, #0e2e7a, #1a4db8);
+    border-top-color: #0a246a;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* little window icon next to app name */
+.xp-taskbar-btn::before {
+    content: "🖥";
+    font-size: 12px;
+    font-style: normal;
+}
+
+/* TASKBAR RIGHT — clock area (system tray) */
+.xp-systray {
+    height: 100%;
+    padding: 0 10px;
+    background: linear-gradient(to bottom, #1448b0, #1a55c8);
+    border-left: 1px solid #0a2d80;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 80px;
+    justify-content: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.xp-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.xp-icons span {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.xp-icons span:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* push body up so window doesn't hide behind taskbar */
+body {
+    padding-bottom: 38px;
+}
