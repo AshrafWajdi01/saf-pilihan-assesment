@@ -69,7 +69,7 @@ Extract the project folder.
 
 Copy the folder:
 
-student-system
+saf-pilihan-assessment
 
 into:
 
@@ -78,11 +78,11 @@ XAMPP/htdocs/
 
 Example:
 
-C:/xampp/htdocs/student-system
+C:/xampp/htdocs/saf-pilihan-assessment
 
 or on macOS:
 
-/Applications/XAMPP/xamppfiles/htdocs/student-system
+/Applications/XAMPP/xamppfiles/htdocs/saf-pilihan-assessment
 
 
 Step 2:
@@ -112,14 +112,14 @@ Step 5:
 
 Import the SQL file located inside the project folder:
 
-student-system/database/database.sql
+saf-pilihan-assessment/database/database.sql
 
 You can import it via phpMyAdmin:
 - Open http://localhost/phpmyadmin
 - Select database: student_system
 - Click Import
 - Choose the file:
-  htdocs/student-system/database/database.sql
+  htdocs/saf-pilihan-assessment/database/database.sql
 - Click Go
 
 
@@ -127,7 +127,7 @@ Step 6:
 
 Open browser and run:
 
-http://localhost/student-system
+http://localhost/saf-pilihan-assessment
 
 
 Notes
