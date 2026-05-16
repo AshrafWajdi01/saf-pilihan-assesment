@@ -108,18 +108,19 @@ Create a new database:
 
 student_system
 
-
 Step 5:
 
-Import the SQL file:
+Import the SQL file located inside the project folder:
 
-database/database.sql
+student-system/database/database.sql
 
-
-This will automatically create:
-
-- students table
-- dummy student records
+You can import it via phpMyAdmin:
+- Open http://localhost/phpmyadmin
+- Select database: student_system
+- Click Import
+- Choose the file:
+  htdocs/student-system/database/database.sql
+- Click Go
 
 
 Step 6:

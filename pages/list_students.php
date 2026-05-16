@@ -25,8 +25,8 @@ $result = mysqli_query($conn, $query);
 
     <div class="xp-tabs">
         <a href="../index.php" class="tab">Home</a>
-        <a href="add_student.php" class="tab">Add</a>
-        <a href="list_students.php" class="tab active">View</a>
+        <a href="add_student.php" class="tab">Add Student</a>
+        <a href="list_students.php" class="tab active">View Students</a>
     </div>
 
     <table class="xp-table">
@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query);
                 <td><?php echo htmlspecialchars($row['course']); ?></td>
                 <td>
                     <a href="edit_student.php?id=<?php echo $row['id']; ?>" class="xp-btn xp-btn-warn" style="min-width:50px;padding:3px 10px;">Edit</a>
-                    <a href="delete_student.php?id=<?php echo $row['id']; ?>" class="xp-btn xp-btn-red" style="min-width:55px;padding:3px 10px;" onclick="return confirm('Delete this student?')">Delete</a>
+                    <a href="delete_student.php?id=<?php echo $row['id']; ?>" class="xp-btn xp-btn-red" style="min-width:50px;padding:3px 10px;" onclick="return confirm('Delete this student?')">Delete</a>
                 </td>
             </tr>
         <?php } ?>

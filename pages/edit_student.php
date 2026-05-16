@@ -45,8 +45,8 @@ if (isset($_POST['update'])) {
 
     <div class="xp-tabs">
         <a href="../index.php" class="tab">Home</a>
-        <a href="add_student.php" class="tab">Add</a>
-        <a href="list_students.php" class="tab active">View</a>
+        <a href="add_student.php" class="tab">Add Student</a>
+        <a href="list_students.php" class="tab active">View Students</a>
     </div>
 
     <div class="xp-content">
@@ -54,15 +54,18 @@ if (isset($_POST['update'])) {
             <table class="xp-form-table">
                 <tr>
                     <td><label for="name">Name</label></td>
-                    <td><input type="text" id="name" name="name" class="xp-input" value="<?php echo htmlspecialchars($row['name']); ?>" required></td>
+                    <td><input type="text" id="name" name="name" class="xp-input" value="<?php echo htmlspecialchars($row['name']); ?>" 
+                                pattern="[A-Za-z\s]+" title="Name can only contain letters and spaces" required></td>
                 </tr>
                 <tr>
                     <td><label for="email">Email</label></td>
-                    <td><input type="email" id="email" name="email" class="xp-input" value="<?php echo htmlspecialchars($row['email']); ?>" required></td>
+                    <td><input type="email" id="email" name="email" class="xp-input" value="<?php echo htmlspecialchars($row['email']); ?>" 
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required></td>
                 </tr>
                 <tr>
                     <td><label for="course">Course</label></td>
-                    <td><input type="text" id="course" name="course" class="xp-input" value="<?php echo htmlspecialchars($row['course']); ?>" required></td>
+                    <td><input type="text" id="course" name="course" class="xp-input" value="<?php echo htmlspecialchars($row['course']); ?>" 
+                                pattern="[A-Za-z\s]+" title="Please enter a valid course name" required></td>
                 </tr>
                 <tr>
                     <td></td>

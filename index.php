@@ -36,7 +36,9 @@
     <div class="xp-content text-center">
 
         <div class="header">
-            <h1>Saf Pilihan <span>Sdn. Bhd.</span></h1>
+            <div class="logo-header">
+                <img src="assets/img/saf.png" alt="Saf Pilihan Sdn. Bhd. Logo">
+            </div>
             <p>Student Management System</p>
             <small>Built by Ashraf Wajdi bin Abdul Shukor</small>
         </div>
